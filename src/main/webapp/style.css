@@ -2,35 +2,51 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed, linear-gradient(to right, #74ebd5, #9face6);
-    background-size: cover;
-    color: #fff; /* Default font color set to white */
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    color: #fff;
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(10px); /* Applies a 10% blur effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensures it stays behind the content */
 }
 
 .container {
-    flex: 1; /* Ensures content stretches to fill available space */
+    flex: 1;
     margin: auto;
     padding: 20px;
     max-width: 800px;
+    position: relative; /* Keeps content above the blurred background */
+    z-index: 1;
 }
 
 header h1 {
     font-size: 3rem;
-    color: #fff; /* White color for "Welcome to My Page" */
+    color: #fff;
     margin-bottom: 10px;
 }
 
 .intro {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    color: #333; /* Keep text inside intro in dark for readability */
+    color: #333;
 }
 
 .intro h2 {
@@ -39,25 +55,26 @@ header h1 {
 }
 
 .intro .highlight {
-    color: #00008b; /* Dark blue for "DEEPAK KUMAR D" */
+    color: #00008b;
     font-weight: bold;
 }
 
 .about h2 {
     font-size: 2.2rem; 
-    color: #fff; /* White color for "About Me" heading */
+    color: #fff;
 }
 
 .about p {
     font-size: 1.2rem; 
-    color: #fff; /* White color for the paragraph */
+    color: #fff;
 }
 
 footer {
     font-size: 1rem; 
-    color: #fff; /* White color for footer text */
+    color: #fff;
     margin-top: auto;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for footer */
+    background: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
-    position: relative; /* Ensures it stays at the bottom with flexbox */
+    position: relative;
+    z-index: 1;
 }
