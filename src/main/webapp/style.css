@@ -1,49 +1,60 @@
-/* General styles */
-body {
-  font-family: 'Arial', sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/best_devops_certification.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Transparent Overlay */
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 50px 20px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent dark overlay */
+  padding: 20px;
 }
 
-/* Header styles */
-header h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
+.content {
+  max-width: 700px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #f2f2f2;
+}
+
+.content h2 {
+  font-size: 2rem;
   margin-bottom: 15px;
-  color: #444;
+  color: #e6e6e6;
 }
 
-header p {
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 40px;
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #dcdcdc;
 }
 
-/* Logo grid styles */
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.logo-grid img {
-  max-width: 100px;
-  max-height: 100px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.8;
-}
-
-.logo-grid img:hover {
-  transform: scale(1.1);
-  opacity: 1;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
+  color: #fff;
 }
