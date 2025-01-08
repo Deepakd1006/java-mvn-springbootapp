@@ -29,21 +29,23 @@ header h1 {
 }
 
 .intro h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Increased from 2rem */
     margin-bottom: 10px;
 }
 
-.intro .highlight {
-    color: #4CAF50;
-    font-weight: bold;
+.intro p {
+    font-size: 1.2rem; /* Increased font size for the paragraph */
 }
 
-.about {
-    margin: 20px 0;
+.about h2 {
+    font-size: 2.2rem; /* Increased font size for "About Me" heading */
+}
+
+.about p {
+    font-size: 1.2rem; /* Increased font size for "About Me" paragraph */
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increased footer text size */
     color: #666;
 }
