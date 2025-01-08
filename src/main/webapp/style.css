@@ -6,9 +6,13 @@ body {
     background-size: cover;
     color: #333;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
+    flex: 1; /* Ensures content stretches to fill available space */
     margin: auto;
     padding: 20px;
     max-width: 800px;
@@ -16,7 +20,7 @@ body {
 
 header h1 {
     font-size: 3rem;
-    color: #222;
+    color: #fff; /* White color for "Welcome to My Page" */
     margin-bottom: 10px;
 }
 
@@ -29,23 +33,35 @@ header h1 {
 }
 
 .intro h2 {
-    font-size: 2.5rem; /* Increased from 2rem */
+    font-size: 2.5rem; 
     margin-bottom: 10px;
 }
 
+.intro .highlight {
+    color: #00008b; /* Dark blue for "DEEPAK KUMAR D" */
+    font-weight: bold;
+}
+
 .intro p {
-    font-size: 1.2rem; /* Increased font size for the paragraph */
+    font-size: 1.2rem;
+    color: #333; /* Default color */
 }
 
 .about h2 {
-    font-size: 2.2rem; /* Increased font size for "About Me" heading */
+    font-size: 2.2rem; 
+    color: #fff; /* White color for "About Me" heading */
 }
 
 .about p {
-    font-size: 1.2rem; /* Increased font size for "About Me" paragraph */
+    font-size: 1.2rem; 
+    color: #fff; /* White color for the paragraph */
 }
 
 footer {
-    font-size: 1rem; /* Increased footer text size */
-    color: #666;
+    font-size: 1rem; 
+    color: #fff; /* White color for footer text */
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for footer */
+    padding: 10px 0;
+    position: relative; /* Ensures it stays at the bottom with flexbox */
 }
