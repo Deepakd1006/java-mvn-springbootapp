@@ -69,6 +69,21 @@ header h1 {
     color: #fff;
 }
 
+.skills h3 {
+    font-size: 1.5rem;
+    color: #87CEFA; /* Changed to light blue */
+    margin-top: 10px;
+}
+
+.contact a {
+    color: #87CEFA; /* Changed to light blue */
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
 footer {
     font-size: 1rem; 
     color: #fff;
