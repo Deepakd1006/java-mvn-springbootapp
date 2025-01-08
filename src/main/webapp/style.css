@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: url('background.jpg') no-repeat center center fixed, linear-gradient(to right, #74ebd5, #9face6);
     background-size: cover;
-    color: #333;
+    color: #fff; /* Default font color set to white */
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -25,11 +25,12 @@ header h1 {
 }
 
 .intro {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    color: #333; /* Keep text inside intro in dark for readability */
 }
 
 .intro h2 {
@@ -40,11 +41,6 @@ header h1 {
 .intro .highlight {
     color: #00008b; /* Dark blue for "DEEPAK KUMAR D" */
     font-weight: bold;
-}
-
-.intro p {
-    font-size: 1.2rem;
-    color: #333; /* Default color */
 }
 
 .about h2 {
