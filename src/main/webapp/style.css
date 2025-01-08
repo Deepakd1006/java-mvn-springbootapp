@@ -4,6 +4,8 @@ body {
     background: linear-gradient(120deg, #00c6ff, #0072ff);
     color: #fff;
     text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
@@ -16,23 +18,30 @@ body {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 header h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 5px 0;
+    color: #ffeb3b;
+    font-weight: bold;
 }
 
 .name-highlight {
     color: #00ff99;
     font-weight: bold;
+    font-size: 2rem;
 }
 
 .content p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .aws-icons {
@@ -40,10 +49,12 @@ header h2 {
 }
 
 .aws-icons img {
-    width: 150px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.1;
+    z-index: -1;
 }
 
 footer {
