@@ -16,7 +16,7 @@ body::before {
     content: "";
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(90px); /* Applies a 10% blur effect */
+    filter: blur(3px); /* Applies a 10% blur effect */
     position: absolute;
     top: 0;
     left: 0;
