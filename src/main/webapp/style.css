@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,7 +22,7 @@ body {
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -28,7 +30,7 @@ header h1 {
 }
 
 header h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 5px 0;
     color: #ffeb3b;
     font-weight: bold;
@@ -37,7 +39,6 @@ header h2 {
 .name-highlight {
     color: #00ff99;
     font-weight: bold;
-    font-size: 2rem;
 }
 
 .content p {
@@ -46,30 +47,30 @@ header h2 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.aws-icons {
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    opacity: 0.08;
+    z-index: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
 }
 
-.aws-icons img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    opacity: 0.05;
+.logos-grid img {
+    max-width: 100px;
+    max-height: 100px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
 }
 
-.aws-icons .devops-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.7);
-    opacity: 0.1;
+.logos-grid img:hover {
+    transform: scale(1.1);
 }
 
 footer {
