@@ -1,60 +1,53 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General body styles */
 body {
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  background: url('https://www.simplilearn.com/ice9/free_resources_article_thumb/best_devops_certification.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
 }
 
-/* Transparent Overlay */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent dark overlay */
-  padding: 20px;
+/* Overlay to add a dark transparent layer */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.content {
-  max-width: 700px;
+/* Heading styles */
+h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
 }
 
-.content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #f2f2f2;
+h2 {
+    font-size: 2.5em;
+    font-weight: lighter;
+    margin-bottom: 1em;
 }
 
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #e6e6e6;
+/* Paragraph styles */
+p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin: 0 15%;
+    text-align: justify;
 }
 
-.content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #dcdcdc;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  font-size: 0.9rem;
-  color: #fff;
+/* Footer styles */
+.footer {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #ccc;
+    text-transform: uppercase;
 }
