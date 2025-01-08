@@ -13,4 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
         contentMessage.textContent = messages[index];
         index = (index + 1) % messages.length;
     }, 3000);
+
+    const header = document.querySelector("header");
+    header.style.animation = "fadeIn 2s ease-in-out";
+
+    const style = document.createElement("style");
+    style.textContent = `
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    `;
+    document.head.appendChild(style);
 });
