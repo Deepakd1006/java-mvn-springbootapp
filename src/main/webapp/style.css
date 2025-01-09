@@ -52,21 +52,6 @@ body::before {
     }
 }
 
-@keyframes nameGlow {
-    0% {
-        text-shadow: 0px 0px 5px rgba(135, 206, 235, 0.4);
-        color: #87ceeb;
-    }
-    50% {
-        text-shadow: 0px 0px 20px rgba(135, 206, 235, 1);
-        color: #87ceeb;
-    }
-    100% {
-        text-shadow: 0px 0px 5px rgba(135, 206, 235, 0.4);
-        color: #87ceeb;
-    }
-}
-
 /* Header Styling */
 header h1.welcome {
     font-size: 3rem;
@@ -74,58 +59,4 @@ header h1.welcome {
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     animation: glow 2s ease-in-out infinite;
-}
-
-/* Introduction Section */
-.intro {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.intro h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.intro .highlight {
-    color: #87ceeb; /* Sky Blue */
-    font-weight: bold;
-    animation: nameGlow 2s ease-in-out infinite; /* Glowing Animation */
-}
-
-/* About Section */
-.about h2 {
-    font-size: 2.2rem; 
-    color: #fff;
-}
-
-.about p {
-    font-size: 1.2rem; 
-    color: #fff;
-}
-
-/* Skills Section */
-.skills h2, .contact h2 {
-    font-size: 2.2rem;
-    margin-top: 20px;
-}
-
-.skills p, .contact p {
-    font-size: 1.2rem;
-    color: #fff;
-}
-
-/* Footer Section */
-footer {
-    font-size: 1rem;
-    color: #fff;
-    margin-top: auto;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
-    position: relative;
-    z-index: 1;
 }
