@@ -1,3 +1,4 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +17,7 @@ body::before {
     content: "";
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    filter: blur(5px); /* Applies a 10% blur effect */
+    filter: blur(5px); /* Applies a blur effect */
     position: absolute;
     top: 0;
     left: 0;
@@ -25,6 +26,7 @@ body::before {
     z-index: -1; /* Ensures it stays behind the content */
 }
 
+/* Container Styling */
 .container {
     flex: 1;
     margin: auto;
@@ -34,13 +36,51 @@ body::before {
     z-index: 1;
 }
 
-header h1 {
-    font-size: 3rem;
-    color: #fff;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to header text */
+/* Header Animation and Styling */
+@keyframes stylishAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8) rotate(0deg);
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    }
+    25% {
+        opacity: 0.5;
+        transform: translateY(0px) scale(1.1) rotate(5deg);
+        color: #87ceeb;
+        text-shadow: 0px 0px 20px rgba(135, 206, 235, 0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px) scale(1) rotate(-5deg);
+        color: #00bfff;
+        text-shadow: 0px 0px 30px rgba(0, 191, 255, 0.8);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0px) scale(1.2) rotate(3deg);
+        color: #1e90ff;
+        text-shadow: 0px 0px 40px rgba(30, 144, 255, 0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1) rotate(0deg);
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    }
 }
 
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: stylishAnimation 3s ease-in-out infinite; /* Stylish Animation */
+    letter-spacing: 3px; /* Adds spacing between letters for style */
+    text-transform: uppercase; /* Makes the text uppercase */
+}
+
+/* Introduction Section */
 .intro {
     background: rgba(255, 255, 255, 0.9);
     padding: 15px;
@@ -53,44 +93,52 @@ header h1 {
 .intro h2 {
     font-size: 2.5rem; 
     margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for the intro section heading */
 }
 
 .intro .highlight {
     color: #00008b;
     font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for the highlighted text */
 }
 
+/* About Section */
 .about h2 {
     font-size: 2.2rem; 
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for about section heading */
 }
 
 .about p {
     font-size: 1.2rem; 
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for about section text */
+}
+
+/* Skills Section */
+.skills h2, .contact h2 {
+    font-size: 2.2rem;
+    margin-top: 20px;
+}
+
+.skills p, .contact p {
+    font-size: 1.2rem;
+    color: #fff;
 }
 
 .skills h3 {
     font-size: 1.5rem;
-    color: #87CEFA; /* Light blue */
+    color: #fff; /* Changed from yellow to white for better readability */
     margin-top: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for skills headings */
 }
 
+/* Contact Section */
 .contact a {
-    color: #87CEFA; /* Light blue */
+    color: #fff; /* Changed from yellow to white for consistency */
     text-decoration: none;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for contact links */
 }
 
 .contact a:hover {
     text-decoration: underline;
 }
 
+/* Footer Section */
 footer {
     font-size: 1rem; 
     color: #fff;
@@ -99,5 +147,4 @@ footer {
     padding: 10px 0;
     position: relative;
     z-index: 1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for footer text */
 }
