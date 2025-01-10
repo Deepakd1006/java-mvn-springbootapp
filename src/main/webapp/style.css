@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow for all text */
 }
 
 body::before {
@@ -39,24 +40,38 @@ body::before {
 /* Glow Animation */
 @keyframes glow {
     0% {
-        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
-        color: #fff;
+        text-shadow: 0px 0px 5px rgba(0, 0, 139, 0.5);
     }
     50% {
-        text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
-        color: #fff;
+        text-shadow: 0px 0px 20px rgba(0, 0, 139, 1);
     }
     100% {
-        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
-        color: #fff;
+        text-shadow: 0px 0px 5px rgba(0, 0, 139, 0.5);
     }
 }
 
+/* Highlighted Text for Name */
+.intro .highlight {
+    color: #00008b; /* Night blue color */
+    animation: glow 2s ease-in-out infinite; /* Glow in and out animation */
+}
+
 /* Header Styling */
-header h1.welcome {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    animation: glow 2s ease-in-out infinite;
+header h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+/* Section Headings */
+h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+/* Section Paragraphs */
+p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+/* Links */
+a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
 }
