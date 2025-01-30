@@ -1,37 +1,39 @@
+# nginx-deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loksai-eta-deploy
+  name: myapplication
   labels:
-    app: loksai-eta-deploy-lbl
+    app: myapplication-lbl
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: loksai-eta-app
   template:
     metadata:
       labels:
-        app: loksai-eta-app
+        app: deepak_webpage
     spec:
       containers:
-      - name: loksai-eta-container
-        image: loksaieta/sa-wd-webapp
+      - name: chris-chris
+        image: chrisdee10/docker_assignment1:v1.0
         ports:
         - containerPort: 8080
+  selector:
+    matchLabels:
+      app: deepak_webpage
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: loksai-eta-np-service
+  name: myapplication-service
   labels:
-    app: loksai-eta-app
+    app: myapplication-lbl
 spec:
-  selector:
-    app: loksai-eta-deploy-lbl
-
   type: NodePort
+  selector:
+    app: deepak_webpage
   ports:
-  - nodePort: 31028
-    port: 8080
-    targetPort: 8080
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30080
