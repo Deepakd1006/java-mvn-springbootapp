@@ -15,6 +15,7 @@ spec:
       containers:
       - name: chris-chris
         image: chrisdee10/docker_assignment1:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
   selector:
