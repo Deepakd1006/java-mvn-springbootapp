@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: chris-chris
-        image: chrisdee10/docker_assignment1:v1.0
+        image: chrisdee10/docker_assignment1:latest
         ports:
         - containerPort: 8080
   selector:
